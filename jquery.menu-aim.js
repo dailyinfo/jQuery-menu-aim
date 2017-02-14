@@ -104,7 +104,7 @@
         /**
          * Clears the active row, for use with asynchronous callbacks, e.g. setTimeout
          */
-        this.clearActiveRow = function() {
+        var clearActiveRow = function() {
             activeRow = null;
         }
 
