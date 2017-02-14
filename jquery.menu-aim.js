@@ -95,18 +95,14 @@
                 exit: $.noop,
                 activate: $.noop,
                 deactivate: $.noop,
-                exitMenu: $.noop
+                exitMenu: $.noop,
+                clearActiveRow: function() {
+                    activeRow = null;
+                }
             }, opts);
 
         var MOUSE_LOCS_TRACKED = 3,  // number of past mouse locations to track
             DELAY = 300;  // ms delay when user appears to be entering submenu
-        
-        /**
-         * Clears the active row, for use with asynchronous callbacks, e.g. setTimeout
-         */
-        this.clearActiveRow = function() {
-            activeRow = null;
-        }
 
         /**
          * Keep track of the last few locations of the mouse.
